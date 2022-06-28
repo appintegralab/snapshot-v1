@@ -5,7 +5,7 @@
       add
     </q-btn>
     <span class="text-xs ml-2 rounded py-1 px-2 bg-gray-200">
-      {{moment("2022-06-25T21:36:46-03:00").fromNow()}}
+      {{ moment("2022-06-25T21:36:46-03:00").fromNow() }}
     </span>
   </div>
 </template>
@@ -14,7 +14,7 @@
 import { testeStore } from "@/stores/teste.js"
 import notify from "@/utils/notify.js"
 import moment from "@/utils/moment.js"
-
+import { teste } from "./testes"
 export default {
   data() {
     return {
@@ -26,6 +26,9 @@ export default {
     console.log("mounted");
     console.log(this.testeStore.foo);
     console.log("moment", this.moment("2022-06-25T21:36:46-03:00").fromNow());
+
+    teste()
+
   },
   methods: {
     add() {
